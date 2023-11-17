@@ -27,7 +27,8 @@ function displayProducts(products) {
         productInfo.innerHTML = `
             <p class="product-name">${product.Nome}</p>
             <p class="product-code">Código: ${product.Código}</p>
-            <p>Preço: R$ ${product.Preço}</p>
+            <p>Preço: ${product.Preço}</p>
+
         `;
 
         productDiv.appendChild(img);

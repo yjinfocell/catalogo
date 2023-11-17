@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px; /* Reduzi o padding para diminuir o tamanho */
-    background-color: #46acbe;
+    background-color: #ff1b1b;
     opacity: 0.95;
     
 }
@@ -37,7 +37,7 @@ header h1 {
     text-align: center; /* Centralizar o texto horizontalmente */
     margin: 0; /* Remover margem padrão para evitar espaço extra */
     flex: 1; /* Ocupar espaço restante disponível */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "KOMIKAX";
 }
 
 
@@ -57,7 +57,7 @@ header h1 {
 }
 
 .product-info {
-    background-color: rgba(52, 204, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px; /* Arredondar as bordas */
     margin-top: 10px;
@@ -73,7 +73,7 @@ header h1 {
     align-items: center;
     margin: 10px auto; /* Aumentei o margin para melhorar a visualização */
     padding: 15px;
-    background-color: #cbe2f8;
+    background-color: #ffffff;
     justify-content: center;
 }
 .product {
@@ -92,16 +92,16 @@ header h1 {
     padding: 10px;
     font-size: 20px; /* Reduzi o tamanho da fonte */
     outline: none;
-    background-color: #9bcef8;
+    background-color: #ffffff;
     border-radius: 20px; /* Arredondar as bordas */
 }
 
 
 
 body {
-    background-color: #abf5ff62; /* Nova cor de fundo */
+    background-color: rgb(11, 148, 23); /* Nova cor de fundo */
     margin: 0; /* Remova a margem padrão do corpo */
-    font-family: Arial, sans-serif; /* Defina uma fonte de texto padrão */
+    font-family: "KOMIKAX"; /* Defina uma fonte de texto padrão */
 }
 
 /* Estilos para o campo de entrada de quantidade */
@@ -109,7 +109,7 @@ body {
     width: 40px;
     text-align: center;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #fafafa;
     border-radius: 3px;
 }
 
@@ -123,28 +123,18 @@ body {
 .quantity-button {
     width: 20px;
     height: 20px;
-    background-color: #ddd;
+    background-color: #ffffff;
     border: none;
     color: #555;
     font-size: 14px;
     cursor: pointer;
 }
 
-.add-to-cart-button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-/* Adicione um link para os ícones que você deseja usar (por exemplo, Font Awesome) */
-
 
 .botao-home {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffb26a;
+    background-color: #ffffff;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
