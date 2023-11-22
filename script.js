@@ -14,28 +14,40 @@ function displayProducts(products) {
     productContainer.innerHTML = '';
 
     products.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'product';
+        const imagePath = 'produtos/' + product['codigo'] + '.webp';
 
-        const img = document.createElement('img');
-        img.src = 'produtos/' + product['Imagem'];
-        img.width = 300;
-        img.height = 300;
+        // Verificar se a imagem existe antes de adicionar o produto
+        if (imageExists(imagePath)) {
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
 
-        const productInfo = document.createElement('div');
-        productInfo.className = 'product-info';
-        productInfo.innerHTML = `
-            <p class="product-name">${product.Nome}</p>
-            <p class="product-code">Código: ${product.Código}</p>
-            <p>Preço: ${product.Preço}</p>
+            const img = document.createElement('img');
+            img.src = imagePath;
+            img.width = 300;
+            img.height = 300;
 
-        `;
+            const productInfo = document.createElement('div');
+            productInfo.className = 'product-info';
+            productInfo.innerHTML = `
+                <p class="product-name">${product.nome}</p>
+                <p class="product-code">Código: ${product.codigo}</p>
+                <p>Preço: ${product.preço}</p>
+            `;
 
-        productDiv.appendChild(img);
-        productDiv.appendChild(productInfo);
+            productDiv.appendChild(img);
+            productDiv.appendChild(productInfo);
 
-        productContainer.appendChild(productDiv);
+            productContainer.appendChild(productDiv);
+        }
     });
+}
+
+// Função para verificar se a imagem existe
+function imageExists(imagePath) {
+    const http = new XMLHttpRequest();
+    http.open('HEAD', imagePath, false);
+    http.send();
+    return http.status !== 404;
 }
 
 function filterProducts() {
@@ -43,8 +55,8 @@ function filterProducts() {
     const searchTerm = searchBox.value.toLowerCase();
 
     const matchingProducts = window.productsData.filter(product => {
-        const productName = product.Nome.toLowerCase();
-        const productCode = product.Código.toLowerCase();
+        const productName = product.nome.toLowerCase();
+        const productCode = product.codigo.toLowerCase();
         return productName.includes(searchTerm) || productCode.includes(searchTerm);
     });
 
